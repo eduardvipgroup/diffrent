@@ -50,7 +50,7 @@ $font = "<p style=\"color:green\">Этот текст зеленый</p>";
 
     <br>
     <br><br>
-    <?= $b ?>
+    <?= $rest ?>
     <br><br>
     <div style="display: flex ; justify-content: space-around; align-items: center ; margin: auto ; width: 320px">
         <h4 style='color: blue'>TODAY IS </h4>

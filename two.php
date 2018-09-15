@@ -94,9 +94,12 @@ echo "<br>";
 echo "<h4 style='color: #874289'>" . "{$val} в степени {$pow} = " . power($val, $pow) . "</h4>";
 
 // Задание 7
+date_default_timezone_set('asia/vladivostok');
 
-$hour = date('G');
-$min = date('i');
+$time = time();
+
+$hour = date('G', $time);
+$min = date('i', $time);
 
 echo "$hour " . getWord($hour,"hours") . " $min " . getWord($min,"min");
 
@@ -120,9 +123,9 @@ function getWord($number, $format) {
     //затем отдельно добавим само окончание по полученному варианту
     if ($format=="hours")
         switch ($message) {
-            case 1: $format = "часов"; break; // почему так НЕ работает?
-            case 2: $format = "час"; break;
-            case 3: $format = "часа"; break;
+            case 1:  return "часов";  // почему так НЕ работает?
+            case 2:  return "час";
+            case 3:  return "часа";
         }
     if ($format == "min")
         switch ($message) {
