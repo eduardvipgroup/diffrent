@@ -9,7 +9,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         $filename = UPLOADS_DIR . $_FILES['file']['name'];
 
-        if (file_exists($filename)) {
+/*        if (file_exists($filename)) {
             $path = pathinfo($filename);
             function getCount($path)
             {
@@ -26,15 +26,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
             $filename = UPLOADS_DIR . $path['filename'] . getCount($path) . "." . $path['extension'];
 
-        }
+        }*/
+
+        $dest = UPLOADS_SMALL . $_FILES['file']['name'];
 
         img_resize($filename, $dest, 100, 100);
-
 
     }
 
     move_uploaded_file($_FILES['file']['tmp_name'], $filename);
-    //move_uploaded_file($_FILES['file']['tmp_name'], $dest);
+    move_uploaded_file($_FILES['file']['tmp_name'], $dest);
     //header('Location: index.php');
 
 }
