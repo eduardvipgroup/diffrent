@@ -23,9 +23,9 @@ $row = mysqli_fetch_assoc($result);
 echo "<a href='index.php'><img src='" . IMG_BIG . "{$row["img_name"]}' width='800'/></a><br>
 <p>{$row["name"]}</p><br><p>Количество просмотров: {$row["likes"]}</p>";
 
-$result = executeDB("SELECT id, img_name, likes FROM img ORDER BY likes DESC");
+$result = executeDB("SELECT id, `name`, likes FROM img ORDER BY likes DESC");
 while ($row = mysqli_fetch_assoc($result)) {
-    echo "<div style='display: flex'><p>Название фото:&nbsp;{$row["img_name"]}</p>
+    echo "<div style='display: flex'><p>Название фото:&nbsp;{$row["name"]}</p>
           <p> &nbsp;Количество просмотров:&nbsp;{$row["likes"]}</p></div>";
 };
 

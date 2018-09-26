@@ -1,4 +1,4 @@
-﻿<?
+﻿<?php
 //константы путей к изображениям
 define("IMG_SMALL", "gallery_img/small/");
 define("IMG_BIG", "gallery_img/big/");
@@ -12,6 +12,7 @@ function getIMG()
             echo "<a  target=\"_blank\" style='display: flex; min-width:30%; max-width:30%; padding: 10px' href='" . IMG_BIG . "{$filename}'>
             <img src='" . IMG_SMALL . "{$filename}' width='100px' height='100px'/></a>";
         }*/
+
     $db = mysqli_connect('localhost', 'root', '', 'images');
     $result = mysqli_query($db, "SELECT `id`, `img_name` FROM `img`");
 
