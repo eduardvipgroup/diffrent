@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3307
--- Время создания: Сен 25 2018 г., 04:33
+-- Время создания: Сен 27 2018 г., 15:42
 -- Версия сервера: 5.7.20
 -- Версия PHP: 7.2.0
 
@@ -31,8 +31,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `img` (
   `id` int(11) NOT NULL,
   `name` char(30) COLLATE utf8_bin DEFAULT NULL,
-  `img_name` varchar(11) COLLATE utf8_bin NOT NULL,
-  `likes` int(11) NOT NULL
+  `img_name` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `likes` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
@@ -48,12 +48,12 @@ INSERT INTO `img` (`id`, `name`, `img_name`, `likes`) VALUES
 (6, 'WELL DONE3', '06.jpg', 1),
 (7, 'YEAH', '07.jpg', 1),
 (8, 'YEAH2', '08.jpg', 2),
-(9, 'YEAH3', '09.jpg', 6),
+(9, 'YEAH3', '09.jpg', 9),
 (10, 'awesome', '10.jpg', 2),
 (11, 'awesome2', '11.jpg', 3),
 (12, 'awesome3', '12.jpg', 5),
-(13, 'famously', '13.jpg', 11),
-(14, 'famously2', '14.jpg', 14);
+(13, 'famously', '13.jpg', 13),
+(14, 'famously2', '14.jpg', 17);
 
 --
 -- Индексы сохранённых таблиц
@@ -64,6 +64,16 @@ INSERT INTO `img` (`id`, `name`, `img_name`, `likes`) VALUES
 --
 ALTER TABLE `img`
   ADD UNIQUE KEY `index_name` (`id`);
+
+--
+-- AUTO_INCREMENT для сохранённых таблиц
+--
+
+--
+-- AUTO_INCREMENT для таблицы `img`
+--
+ALTER TABLE `img`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
