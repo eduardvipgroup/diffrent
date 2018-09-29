@@ -44,4 +44,3 @@ While ($row = mysqli_fetch_assoc($result)) {
 mysqli_close($db);
 return $row;
 }*/
-

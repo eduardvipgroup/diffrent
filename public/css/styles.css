@@ -1,0 +1,60 @@
+input {
+    color: #0b0c86;
+    font-size: 13px;
+}
+.content h1{
+    margin: 10px;
+}
+.item{
+    background-color: #fff;
+    display: inline-block;
+    border: 1px solid #ccc; 
+    width: 240px; 
+    text-align: center; 
+    padding-bottom: 10px;
+    vertical-align: top;
+    margin-right: 40px; 
+    margin-top: 10px;
+}
+.item:nth-of-type(3n){
+    float: right;
+    margin-right: 0;
+}
+.item img{
+    width: 200px; 
+    height: 200px;
+}
+.item .item-name a:hover{
+    text-decoration: underline;
+}
+.item h3{
+    margin: 0; 
+    font-size: 18px;
+}
+.item:hover{
+    border: 1px solid #999;
+}
+.price{
+    font-size: 24px; 
+    color: coral; 
+    margin: 10px;
+}
+.add-to-basket{
+    border: 1px solid #ccc; 
+    width: 150px; 
+    height: 50px; 
+    margin: 0 auto;
+    background-color: #17689b; 
+}
+
+.add-to-basket:hover{
+    background-color: blue; 
+    cursor: pointer;
+}
+.add-to-basket a{
+    font-size: 20px; 
+    color: #fff;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}

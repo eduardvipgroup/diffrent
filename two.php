@@ -123,7 +123,7 @@ function getWord($number, $format) {
     //затем отдельно добавим само окончание по полученному варианту
     if ($format=="hours")
         switch ($message) {
-            case 1:  return "часов";  // почему так НЕ работает?
+            case 1:  return "часов";
             case 2:  return "час";
             case 3:  return "часа";
         }
